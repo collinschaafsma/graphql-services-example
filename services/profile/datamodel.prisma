@@ -1,0 +1,8 @@
+type Profile {
+  id: ID! @unique
+  firstName: String!
+  lastName: String!
+  avatarUri: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
