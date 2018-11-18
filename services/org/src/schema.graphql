@@ -7,7 +7,6 @@ type Query {
 
 type Mutation {
   createOrganization(name: String!): Organization!
-  updateOrganization(id: ID!, name: String!) Organization!
   deleteOrganization(id: ID!): Organization
 }
 
