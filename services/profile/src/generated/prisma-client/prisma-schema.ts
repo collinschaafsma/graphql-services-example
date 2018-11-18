@@ -40,7 +40,7 @@ type Profile {
   id: ID!
   firstName: String!
   lastName: String!
-  avatarUri: String!
+  avatarUri: String
   createdAt: DateTime!
   updatedAt: DateTime!
 }
@@ -54,7 +54,7 @@ type ProfileConnection {
 input ProfileCreateInput {
   firstName: String!
   lastName: String!
-  avatarUri: String!
+  avatarUri: String
 }
 
 type ProfileEdge {
@@ -81,7 +81,7 @@ type ProfilePreviousValues {
   id: ID!
   firstName: String!
   lastName: String!
-  avatarUri: String!
+  avatarUri: String
   createdAt: DateTime!
   updatedAt: DateTime!
 }

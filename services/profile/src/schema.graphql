@@ -1,0 +1,21 @@
+scalar DateTime
+
+type Query {
+  profiles: [Profile!]!
+  profile(id: ID!): Profile
+}
+
+type Mutation {
+  createProfile(firstName: String!, lastName: String!, avatarUri: String): Profile!
+  updateProfile(id: ID!, firstName: String, lastName: String, avatarUri: String) Profile!
+  deleteProfile(id: ID!): Profile
+}
+
+type Profile {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  avatarUri: String
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}

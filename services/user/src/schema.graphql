@@ -1,0 +1,32 @@
+scalar DateTime
+
+type Query {
+  me: User
+  user(id: ID!): User
+}
+
+type Mutation {
+  deleteUser(id: ID!): User
+  signup(firstName: String!, lastName: String!, email: String!, password: String!): AuthPayload!
+  login(email: String!, password: String!): AuthPayload!
+}
+
+type AuthPayload {
+  token: String!
+  user: User!
+}
+
+type UserOrganization {
+  id: ID!
+  userId: ID!
+  organizationId: ID!
+  createdAt: DateTime!
+}
+
+type User {
+  id: ID!
+  email: String!
+  profileId: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}

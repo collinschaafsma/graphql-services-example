@@ -1,4 +1,6 @@
 type Organization {
   id: ID! @unique
   name: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
 }

@@ -200,7 +200,7 @@ export interface ProfileWhereInput {
 export interface ProfileCreateInput {
   firstName: String;
   lastName: String;
-  avatarUri: String;
+  avatarUri?: String;
 }
 
 export interface ProfileUpdateInput {
@@ -234,7 +234,7 @@ export interface Profile {
   id: ID_Output;
   firstName: String;
   lastName: String;
-  avatarUri: String;
+  avatarUri?: String;
   createdAt: DateTimeOutput;
   updatedAt: DateTimeOutput;
 }
@@ -375,7 +375,7 @@ export interface ProfilePreviousValues {
   id: ID_Output;
   firstName: String;
   lastName: String;
-  avatarUri: String;
+  avatarUri?: String;
   createdAt: DateTimeOutput;
   updatedAt: DateTimeOutput;
 }
