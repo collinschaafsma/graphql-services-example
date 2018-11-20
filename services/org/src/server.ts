@@ -1,3 +1,5 @@
+import { config } from './utils/config';
+import { logger } from './utils/logger';
 import { GraphQLServer } from 'graphql-yoga'
 import { prisma } from './generated/prisma-client'
 import { resolvers } from './resolvers'
@@ -13,4 +15,11 @@ const server = new GraphQLServer({
   },
 })
 
-server.start(() => console.log('Server is running on http://localhost:4000'))
+server.start(
+  {
+    port: config.port,
+    tracing: config.tracing,
+    cacheControl: config.cacheControl,
+  },
+  () => logger.log('info', 'GraphQL Server running on port %d', config.port)
+);
