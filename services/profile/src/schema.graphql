@@ -7,7 +7,6 @@ type Query {
 
 type Mutation {
   createProfile(firstName: String!, lastName: String!, avatarUri: String): Profile!
-  updateProfile(id: ID!, firstName: String, lastName: String, avatarUri: String) Profile!
   deleteProfile(id: ID!): Profile
 }
 
