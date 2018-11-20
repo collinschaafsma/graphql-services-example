@@ -1,13 +1,13 @@
 scalar DateTime
 
 type Query {
-  me: User
+  currentUser: User
   user(id: ID!): User
 }
 
 type Mutation {
   deleteUser(id: ID!): User
-  signup(firstName: String!, lastName: String!, email: String!, password: String!): AuthPayload!
+  createUser(firstName: String!, lastName: String!, email: String!, password: String!): AuthPayload!
   login(email: String!, password: String!): AuthPayload!
 }
 

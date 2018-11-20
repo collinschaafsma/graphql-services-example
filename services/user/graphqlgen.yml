@@ -4,7 +4,8 @@ schema: ./src/schema.graphql
 context: ./src/types.ts:Context
 models:
   files:
-    - ./src/generated/prisma-client/index.ts
+    - ./src/types.ts
+    - path: ./src/generated/prisma-client/index.ts
 
 output: ./src/generated/graphqlgen.ts
 
