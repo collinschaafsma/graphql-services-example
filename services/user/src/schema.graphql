@@ -7,7 +7,7 @@ type Query {
 
 type Mutation {
   deleteUser(id: ID!): User
-  createUser(firstName: String!, lastName: String!, email: String!, password: String!): AuthPayload!
+  createUser(email: String!, password: String!, profileId: ID!): AuthPayload!
   login(email: String!, password: String!): AuthPayload!
 }
 

@@ -133,10 +133,9 @@ export namespace MutationResolvers {
   }
 
   export interface ArgsCreateUser {
-    firstName: string;
-    lastName: string;
     email: string;
     password: string;
+    profileId: string;
   }
 
   export interface ArgsLogin {

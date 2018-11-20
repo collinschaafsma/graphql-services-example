@@ -1,5 +1,6 @@
 import { UserOrganizationResolvers } from "../generated/graphqlgen";
 
 export const UserOrganization: UserOrganizationResolvers.Type = {
-  ...UserOrganizationResolvers.defaultResolvers
+  ...UserOrganizationResolvers.defaultResolvers,
+  createdAt: parent => parent.createdAt,
 };
