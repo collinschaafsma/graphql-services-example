@@ -1,4 +1,4 @@
-import { QueryResolvers } from "../generated/graphqlgen";
+import { QueryResolvers } from '../generated/graphqlgen';
 
 export const Query: QueryResolvers.Type = {
   organizations: (parent, args, ctx) => {
@@ -7,4 +7,4 @@ export const Query: QueryResolvers.Type = {
   organization: (parent, { id }, ctx) => {
     return ctx.db.organization({ id });
   }
-};
+}

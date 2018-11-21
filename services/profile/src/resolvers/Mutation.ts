@@ -1,4 +1,4 @@
-import { MutationResolvers } from "../generated/graphqlgen";
+import { MutationResolvers } from '../generated/graphqlgen';
 
 export const Mutation: MutationResolvers.Type = {
   createProfile: async (parent, { firstName, lastName, avatarUri }, ctx) => {
@@ -11,4 +11,4 @@ export const Mutation: MutationResolvers.Type = {
   deleteProfile: async (parent, { id }, ctx) => {
     return ctx.db.deleteProfile({ id });
   }
-};
+}

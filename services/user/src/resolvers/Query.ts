@@ -1,4 +1,4 @@
-import { QueryResolvers } from "../generated/graphqlgen";
+import { QueryResolvers } from '../generated/graphqlgen';
 import { getCurrentUser } from '../utils/authentication';
 
 export const Query: QueryResolvers.Type = {
@@ -9,4 +9,4 @@ export const Query: QueryResolvers.Type = {
   user: (parent, { id }, ctx) => {
     return ctx.db.user({ id })
   }
-};
+}

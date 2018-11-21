@@ -24,6 +24,6 @@ const config: IConfig = {
   userPrismaServiceSecret: process.env.USER_PRISMA_SERVICE_SECRET,
   profilePrismaServiceSecret: process.env.PROFILE_PRISMA_SERVICE_SECRET,
   organizationPrismaServiceSecret: process.env.ORGANIZATION_PRISMA_SERVICE_SECRET,
-};
+}
 
 export { config };

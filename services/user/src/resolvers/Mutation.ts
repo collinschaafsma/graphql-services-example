@@ -1,7 +1,7 @@
-import { hash, compare } from 'bcrypt'
-import { sign } from 'jsonwebtoken'
-import { APP_SECRET } from "../utils/authentication"
-import { MutationResolvers } from "../generated/graphqlgen";
+import { hash, compare } from 'bcrypt';
+import { sign } from 'jsonwebtoken';
+import { APP_SECRET } from '../utils/authentication';
+import { MutationResolvers } from '../generated/graphqlgen';
 
 export const Mutation: MutationResolvers.Type = {
   //...MutationResolvers.defaultResolvers,
@@ -29,7 +29,7 @@ export const Mutation: MutationResolvers.Type = {
     }
 
     const valid = await compare(password, user.password)
-    
+
     if (!valid) {
       throw new Error('Invalid password')
     }
@@ -39,4 +39,4 @@ export const Mutation: MutationResolvers.Type = {
       user,
     }
   }
-};
+}

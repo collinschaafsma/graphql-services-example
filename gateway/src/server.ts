@@ -1,10 +1,10 @@
-import { config } from './utils/config'
-import { logger } from './utils/logger'
-import { GraphQLServer } from 'graphql-yoga'
-import { userBinding } from './bindings/user-binding'
-import { organizationBinding } from './bindings/organization-binding'
-import { profileBinding } from './bindings/profile-binding'
-import { resolvers } from './resolvers'
+import { config } from './utils/config';
+import { logger } from './utils/logger';
+import { GraphQLServer } from 'graphql-yoga';
+import { userBinding } from './bindings/user-binding';
+import { organizationBinding } from './bindings/organization-binding';
+import { profileBinding } from './bindings/profile-binding';
+import { resolvers } from './resolvers';
 
 const server = new GraphQLServer({
   typeDefs: './src/schema.graphql',
@@ -17,7 +17,7 @@ const server = new GraphQLServer({
       profileService: profileBinding,
     }
   },
-})
+});
 
 server.start(
   {

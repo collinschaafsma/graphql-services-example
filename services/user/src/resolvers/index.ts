@@ -12,4 +12,4 @@ export const resolvers: Resolvers = {
   Mutation,
   AuthPayload,
   UserOrganization
-};
+}

@@ -1,4 +1,4 @@
-import { verify } from 'jsonwebtoken'
+import { verify } from 'jsonwebtoken';
 import { config } from './config';
 
 export const APP_SECRET = config.appSecret;

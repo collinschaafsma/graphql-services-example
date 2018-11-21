@@ -1,4 +1,4 @@
-import { MutationResolvers } from "../generated/graphqlgen";
+import { MutationResolvers } from '../generated/graphqlgen';
 
 export const Mutation: MutationResolvers.Type = {
   createOrganization: async (parent, { name }, ctx) => {
@@ -9,4 +9,4 @@ export const Mutation: MutationResolvers.Type = {
   deleteOrganization: async (parent, { id }, ctx) => {
     return ctx.db.deleteOrganization({ id });
   }
-};
+}
