@@ -5,4 +5,4 @@ export const organizationBinding = new Prisma({
   typeDefs,
   endpoint: 'http://localhost:4467',
   secret: 'mysecret42'
-})
+});

@@ -3,6 +3,7 @@ import { logger } from './utils/logger'
 import { GraphQLServer } from 'graphql-yoga'
 import { userBinding } from './bindings/user-binding'
 import { organizationBinding } from './bindings/organization-binding'
+import { profileBinding } from './bindings/profile-binding'
 import { resolvers } from './resolvers'
 
 const server = new GraphQLServer({
@@ -13,6 +14,7 @@ const server = new GraphQLServer({
       ...request,
       userService: userBinding,
       organizationService: organizationBinding,
+      profileService: profileBinding,
     }
   },
 })
