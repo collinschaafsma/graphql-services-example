@@ -1,11 +1,18 @@
 import { config } from './utils/config'
 import { logger } from './utils/logger'
 import { GraphQLServer } from 'graphql-yoga'
+import { userBinding } from './bindings/user-binding'
+import { organizationBinding } from './bindings/organization-binding'
+import { resolvers } from './resolvers'
 
 const server = new GraphQLServer({
+  typeDefs: './src/schema.graphql',
+  resolvers,
   context: request => {
     return {
       ...request,
+      userService: userBinding,
+      organizationService: organizationBinding,
     }
   },
 })

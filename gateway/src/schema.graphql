@@ -1,0 +1,61 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Query {
+  organizations: [Organization!]!
+  organization(id: ID!): Organization
+  profiles: [Profile!]!
+  profile(id: ID!): Profile
+  currentUser: User
+  user(id: ID!): User
+}
+
+type Mutation {
+  createOrganization(name: String!): Organization!
+  deleteOrganization(id: ID!): Organization
+  createProfile(firstName: String!, lastName: String!, avatarUri: String): Profile!
+  deleteProfile(id: ID!): Profile
+  deleteUser(id: ID!): User
+  createUser(email: String!, password: String!, profileId: ID!): AuthPayload!
+  login(email: String!, password: String!): AuthPayload!
+}
+
+scalar DateTime
+
+type Organization {
+  id: ID!
+  name: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type Profile {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  avatarUri: String
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type AuthPayload {
+  token: String!
+  user: User!
+}
+
+type UserOrganization {
+  id: ID!
+  userId: ID!
+  organizationId: ID!
+  createdAt: DateTime!
+}
+
+type User {
+  id: ID!
+  email: String!
+  profileId: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
